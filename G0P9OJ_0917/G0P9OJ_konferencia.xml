@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<konferencia>
+    <cim>Adatkezelés XML-ben</cim>
+    <hallgatók>
+        <hallgató>
+            <név>Jobbágy Dániel</név>
+            <lakcím>Miskolc</lakcím>
+        </hallgató>    
+    </hallgatók>
+    <helyszín>Miskolc</helyszín> 
+    <előadó>
+        <név>Dr. Bednarik László</név>
+        <adószám>5550123</adószám>
+        <lakcím>Miskolc</lakcím>    
+    </előadó> 
+    <dátum>2024.09.17.</dátum>
+</konferencia>
+
+<konferencia>
+    <cim>Adatkezelés XML-ben</cim>
+    <hallgatók>
+        <hallgató>
+            <név>Szepesi Glória Virág</név>
+            <lakcím>Miskolc</lakcím>
+        </hallgató>    
+    </hallgatók>
+    <helyszín>Miskolc</helyszín> 
+    <előadó>
+        <név>Dr. Bednarik László</név>
+        <adószám>5550123</adószám>
+        <lakcím>Miskolc</lakcím>    
+    </előadó> 
+    <dátum>2024.09.17.</dátum>
+</konferencia>
