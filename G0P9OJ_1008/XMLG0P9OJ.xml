@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<vendeglatas xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi.noNamespaceSchemaLocation="JA_XMLSchema.xsd">
+
+    <etterem ekod="e1">
+        <nev>Trófea</nev>
+        <cim>
+            <varos>Budapest</varos>
+            <utca>Videgrádi</utca>
+            <hazszam>13</hazszam>
+        </cim>
+        <csillag>4</csillag>
+    </etterem>
+
+    <foszakacs fkod="f1" e_f="e1">
+        <nev>Havas Péter</nev>
+        <eletkor>35</eletkor>
+        <vegzettseg>Szakközépiskla</vegzettseg>
+        <vegzettseg>Institut Paul Bocuse</vegzettseg>
+    </foszakacs>
+
+    <szakacs szkod="sz1" e_sz="e1">
+        <nev>Ötlet Elek</nev>
+        <reszleg></reszleg>
+        <vegzettseg>Szakközépiskola</vegzettseg>
+        <vegzettseg></vegzettseg>
+        <vegzettseg></vegzettseg>
+    </szakacs>
+
+    <gyakornok gykod="gy1" e_gy="e1">
+        <nev>Bordás Dávid</nev>
+        <gyakorlat>
+            <kezdete>2024.10.08.</kezdete>
+            <idotartama>2 hónap</idotartama>
+        </gyakorlat>
+        <muszak>Délelőtt</muszak>
+        <muszak>Este</muszak>
+    </gyakornok>
+
+    <vendeg vkod="v1">
+        <nev>Fekete Péter</nev>
+        <eletkor>21</eletkor>
+        <cim>
+            <varos>Miskolc</varos>
+            <utca>Márton</utca>
+            <hazszam>17</hazszam>
+        </cim>
+    </vendeg>
+
+    <rendeles e_v_e="e1" e_v_V="v1">
+        <osszeg>9000</osszeg>
+        <etel>Steak</etel>
+    </rendeles>
+
+</vendeglatas>
