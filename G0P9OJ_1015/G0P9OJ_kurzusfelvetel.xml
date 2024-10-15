@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE G0P9OJ_kurzusfelvetel SYSTEM "G0P9OJ_kurzusfelvetel.dtd">
+
+<G0P9OJ_kurzusfelvetel tanev="2024/2025" egyetem="ME" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="kurzusfelvetel1.xsd">
+
+    <hallgato id="G0P9OJ.ME">
+        <nev>Jobbágy Dániel</nev>
+        <szulev>2001.01.24.</szulev>
+        <szak evf="5">Mérnökinformatikus Bsc</szak>
+    </hallgato>
+
+    <kurzusok>
+        <kurzus id="GEIAL332-B">
+            <kurzusnev>Adatkezelés XML környezetben</kurzusnev>
+            <kredit>5</kredit>
+            <hely>I103.</hely>
+            <idopont>Kedd 10:00-13:30</idopont>
+            <oktato>Dr. Bednarik László</oktato>
+        </kurzus>
+
+        <kurzus id="GEIAL332-B">
+            <kurzusnev>Adatkezelés XML környezetben</kurzusnev>
+            <kredit>5</kredit>
+            <hely>I103.</hely>
+            <idopont>Kedd 10:00-13:30</idopont>
+            <oktato>Dr. Bednarik László</oktato>
+        </kurzus>
+
+        <kurzus id="GEIAL32B-B" nyelv="magyar">
+            <kurzusnev>Oracle Rendszergazda</kurzusnev>
+            <kredit>5</kredit>
+            <hely>I103.</hely>
+            <idopont>Hétfő 08:00-09:30</idopont>
+            <oktato>Dr. Kovács László</oktato>
+            <oraado>Szűcs Miklós</oraado>
+        </kurzus>
+
+        <kurzus id="GEIAL335-B" nyelv="magyar">
+            <kurzusnev>Mobil programozási alapok</kurzusnev>
+            <kredit>5</kredit>
+            <hely>I103.</hely>
+            <idopont>Hétfő 16:00-19:30</idopont>
+            <oktato>Dr. Agárdi Antia</oktato>
+        </kurzus>
+    </kurzusok>
+
+</G0P9OJ_kurzusfelvetel>
