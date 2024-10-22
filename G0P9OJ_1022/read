@@ -1,0 +1,74 @@
+package domG0P9OJ1022;
+
+import java.io.File;
+import java.io.IOException;
+
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.ParserConfigurationException;
+import org.xml.sax.SAXException;
+
+import org.w3c.dom.Document;
+import org.w3c.dom.NodeList;
+import org.w3c.dom.Node;
+import org.w3c.dom.Element;
+
+public class DOMRead {
+	public static void main(String argv[]) throws SAXException, IOException, ParserConfigurationException {
+		
+		//file megnyitása
+		File xmlFile = new File("hallgatok.xml");
+		
+		//példányosítás a newInstance()-el
+		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+		
+		DocumentBuilder dBuilder = factory.newDocumentBuilder();
+		//DocBuiFac-ból megkapjuk a DocBui-t
+		//DocBui: tartalmazza az APIt
+		
+		//DOM fa előállítása
+		Document neptunkod = dBuilder.parse(xmlFile);
+		//a parse elemzi az xml filet
+		
+		neptunkod.getDocumentElement().normalize();
+		//dokumentum normalizálása
+		
+		System.out.println("Gyökér elem: " + neptunkod.getDocumentElement().getNodeName());
+		//kiíratás
+		
+		NodeList nList = neptunkod.getElementsByTagName("hallgato"); //gyerekelemek listába mentése
+		
+		for (int i = 0; i < nList.getLength(); i++) {
+			Node nNode = nList.item(i);
+			
+			System.out.println("\nAktuális elem: " + nNode.getNodeName());
+			
+			if (nNode.getNodeType() == Node.ELEMENT_NODE) {
+				
+				//az aktuális elem Elementté alakítása
+				Element elem = (Element) nNode;
+				
+				//az aktuális elem attribútumának tartalma
+				String hid = elem.getAttribute("id");
+				//az elem attribútumának lekérdezése
+				
+				//aktuális elem gyerekelemei és tartalma
+				Node node1 = elem.getElementsByTagName("keresztnev").item(0);
+				String kname = node1.getTextContent();
+				
+				Node node2 = elem.getElementsByTagName("vezeteknev").item(0);
+				String vname = node2.getTextContent();
+				
+				Node node3 = elem.getElementsByTagName("foglalkozas").item(0);
+				String fname =node3.getTextContent();
+				//a hallgato elem gyerekelemeinek tartalma
+				
+				//kiíratás
+				System.out.println("Hallgató id: " + hid);
+				System.out.println("Keresztnév: " + kname);
+				System.out.println("Vezetéknév: " + vname);
+				System.out.println("Foglalkozás: " + fname);
+			}
+		}
+	}
+}
