@@ -1,17 +1,10 @@
-Document doc = docBuilder.parse(inputFile);
+// Tartalom konzolra kiírása
+			TransformerFactory transformerFactory = TransformerFactory.newInstance();
+			Transformer transformer = transformerFactory.newTransformer();
 			
-			Node hallgatok = doc.getFirstChild();
+			//Ez DOMSource tartalmazza a Dom filet
+			DOMSource source = new DOMSource(doc);
 			
-			Node hallgat = doc.getElementsByTagName("hallgato").item(0);
-			
-			//halgat attribútumának módosítása
-			NameNodeMap attr = hallgat.getAttributes();
-			Node nodeAttr = attr.getNameItem("id");
-			nodeAttr.setTextContent("01");
-			
-			// loop the hallgat child node
-			NodeList list = hallgat.getChildNodes();
-			
-			for (int temp = 0; temp <list.getLenght(); temp++) {
-				
-			}
+			System.out.println("---Módosított fájl---");
+			StreamResult consoleResult = new StreamResult(System.out);
+			transformer.transform(source, consoleResult);
