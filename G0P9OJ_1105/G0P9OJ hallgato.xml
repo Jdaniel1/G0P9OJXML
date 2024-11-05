@@ -1,0 +1,17 @@
+<hallgatok>
+    <hallgato id="1">
+        <keresztnev>Pál</keresztnev>
+        <vezeteknev>Kiss</vezeteknev>
+        <foglalkozas>Web Developer</foglalkozas>
+    </hallgato>
+    <hallgato id="2">
+        <keresztnev>Piroska</keresztnev>
+        <vezeteknev>Vigh</vezeteknev>
+        <foglalkozas>Java Programozo</foglalkozas>
+    </hallgato>
+    <hallgato id="3">
+        <keresztnev>Ferenc</keresztnev>
+        <vezeteknev>Gordon</vezeteknev>
+        <foglalkozas>associate professor</foglalkozas>
+    </hallgato>
+</hallgatok>
