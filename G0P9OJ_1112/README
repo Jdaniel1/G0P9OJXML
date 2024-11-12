@@ -1,1 +1,33 @@
+1. Lépés: JAR csomag letöltése és hozzáadása az Eclipse-hez
+Nyisd meg a böngésződ és keresd meg a következő JAR csomagot:
 
+json-simple 1.1.1
+
+json-simple 2.1.2
+
+Töltsd le a kiválasztott JAR fájlt.
+
+Nyisd meg az Eclipse IDE-t.
+
+Jobb klikk a projekten a "Package Explorer" ablakban és válaszd az "Properties" menüpontot.
+
+Válaszd a "Java Build Path" lehetőséget a bal oldali menüben.
+
+Kattints az "Add External JARs..." gombra és tallózd be a letöltött json-simple JAR fájlt.
+
+Nyomd meg az "Apply and Close" gombot.
+
+2. Lépés: Java program elkészítése
+Projekt létrehozása
+Hozz létre egy új Java projektet az Eclipse-ben: "File" -> "New" -> "Java Project".
+
+Nevezd el a projektet: JSONParseNeptunkod.
+
+Hozz létre egy új csomagot: Jobb klikk a "src" mappán -> "New" -> "Package". A csomag neve legyen neptunkod1112.
+
+Hozz létre egy új Java osztályt: Jobb klikk a neptunkod1112 csomagon -> "New" -> "Class". Az osztály neve legyen JSONReadNeptunkod.
+
+XML fájl konvertálása JSON formátumba
+Hozz létre egy orarendNeptunkod.xml fájlt a projekt gyökér könyvtárában.
+
+A következő XML tartalommal töltsd fel a fájlt:
