@@ -6,6 +6,7 @@
         <html>
             <body>
                 <h2>Diákok adatai</h2>
+                
                 <table border="1">
                     <tr bgcolor="#9acd32">
                         <th>Vezetéknév</th>
@@ -14,6 +15,7 @@
                         <th>Kor</th>
                         <th>Ösztöndíj</th>
                     </tr>
+                    
                     <xsl:for-each select="class/student">
                         <tr>
                             <td><xsl:value-of select="vezeteknev"/></td>
