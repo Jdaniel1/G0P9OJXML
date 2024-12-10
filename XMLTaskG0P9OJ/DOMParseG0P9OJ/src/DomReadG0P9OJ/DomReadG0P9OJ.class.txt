@@ -1,0 +1,122 @@
+package DomReadG0P9OJ;
+
+import java.io.File;
+import java.util.ArrayList;
+import java.util.Iterator;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+
+public class DomReadG0P9OJ {
+   public DomReadG0P9OJ() {
+   }
+
+   public static void main(String[] var0) {
+      try {
+         File file = new File("XML_read_output.txt");
+         StreamResult streamres = new StreamResult(file);
+         DocumentBuilderFactory docFac = DocumentBuilderFactory.newInstance();
+         DocumentBuilder docBuild = docFac.newDocumentBuilder();
+         Document doc = docBuild.parse(new File("XMLG0P9OJ.xml"));
+         cutEmptyStrings(doc.getDocumentElement());
+         writeDoc(doc, streamres);
+         System.out.println(makeToXMLFormat(doc));
+      } catch (Exception exc) {
+         exc.printStackTrace();
+      }
+
+   }
+
+
+   private static void cutEmptyStrings(Node nodeVar) {
+      NodeList nodes = nodeVar.getChildNodes();
+      ArrayList list = new ArrayList();
+
+      for(int i = 0; i < nodes.getLength(); ++i) {
+         if (nodes.item(i).getNodeType() == 3 && nodes.item(i).getTextContent().isEmpty()) {
+            list.add(nodes.item(i));
+         } else {
+            cutEmptyStrings(nodes.item(i));
+         }
+      }
+
+      Iterator iter = list.iterator();
+
+      while(iter.hasNext()) {
+         Node nodeIter = (Node)iter.next();
+         nodeVar.removeChild(nodeIter);
+      }
+
+   }
+
+
+   public static void writeDoc(Document doc, StreamResult streamRes) {
+      try {
+         TransformerFactory factory = TransformerFactory.newInstance();
+         Transformer transformer = factory.newTransformer();
+         transformer.setOutputProperty("encoding", "UTF-8");
+         transformer.setOutputProperty("indent", "yes");
+         transformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "2");
+         DOMSource docSource = new DOMSource(doc);
+         transformer.transform(docSource, streamRes);
+      } catch (Exception exc) {
+         exc.printStackTrace();
+      }
+
+   }
+
+
+   public static String makeToXMLFormat(Document doc) {
+      String var10000 = doc.getXmlVersion();
+      return "<?xml version=\"" + var10000 + "\" encoding=\"" + doc.getXmlEncoding() + "\" ?>" + elementsToXMLFormat(doc.getDocumentElement(), 0);
+   }
+
+
+   public static String elementsToXMLFormat(Node node, int var1) {
+      if (node.getNodeType() != 1) {
+         return "";
+      } else {
+         StringBuilder stringBuild = new StringBuilder();
+         stringBuild.append(getIndent(var1)).append("<").append(((Element)node).getTagName());
+         if (node.hasAttributes()) {
+            for(int i = 0; i < node.getAttributes().getLength(); ++i) {
+               Node nodeItem = node.getAttributes().item(i);
+               stringBuild.append(" ").append(nodeItem.getNodeName()).append("=\"").append(nodeItem.getNodeValue()).append("\"");
+            }
+         }
+
+         NodeList getNodeList = node.getChildNodes();
+         if (getNodeList.getLength() == 1 && getNodeList.item(0).getNodeType() == 3) {
+            stringBuild.append(">").append(getNodeList.item(0).getTextContent().trim()).append("</").append(((Element)node).getTagName()).append(">\n");
+         } else {
+            stringBuild.append(">\n");
+
+            for(int k = 0; k < getNodeList.getLength(); ++k) {
+               stringBuild.append(elementsToXMLFormat(getNodeList.item(k), var1 + 1));
+            }
+
+            stringBuild.append(getIndent(var1)).append("</").append(((Element)node).getTagName()).append(">\n");
+         }
+
+         return stringBuild.toString();
+      }
+   }
+
+
+   private static String getIndent(int var1) {
+      StringBuilder stringBuild = new StringBuilder();
+
+      for(int i = 0; i < var1; ++i) {
+         stringBuild.append("    ");
+      }
+
+      return stringBuild.toString();
+   }
+}
