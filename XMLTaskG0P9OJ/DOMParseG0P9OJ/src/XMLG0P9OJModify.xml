@@ -2,7 +2,6 @@
 <gepjarmu xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="XMLSchemaG0P9OJ.xsd">
 
     <!-- munkagepek -->
-
     <munkagep rendszam="AB-CD-123">
         <tulaj_jogsi>HU345678</tulaj_jogsi>
         <motor_szama>100FDSAF008F1G</motor_szama>
