@@ -27,7 +27,6 @@
     </munkagep>
 
     <!-- tulajdonosok -->
-
     <tulajdonos jogositvany_szama="FR346544">
         <nev>
             <vezeteknev>Kovacs</vezeteknev>
@@ -50,7 +49,6 @@
     </tulajdonos>
 
     <!-- motorok -->
-
     <motor motorszam="100FDSAF008F1G">
         <uzemanyag>dizel</uzemanyag>
         <loero>68</loero>
@@ -70,7 +68,6 @@
     </motor>
 
     <!-- karosszériák -->
-
     <karosszeria alvazszam="0FSFDSFFF70000019">
         <felulet>matt</felulet>
         <engedely>van</engedely>
@@ -93,7 +90,6 @@
     </karosszeria>
 
     <!-- informaciok -->
-
     <gyartas gyartasID="15B">
         <marka>Hyundai</marka>
         <modell>R25Z-9AK</modell>
@@ -113,7 +109,6 @@
     </gyartas>
 
     <!-- birtoklas kapcsolatok -->
-
     <birtoklas jogositvany_szama="HU345678" rendszam="AB-CD-123">
         <birtoklas_kezdete>2022-01-01</birtoklas_kezdete>
     </birtoklas>
