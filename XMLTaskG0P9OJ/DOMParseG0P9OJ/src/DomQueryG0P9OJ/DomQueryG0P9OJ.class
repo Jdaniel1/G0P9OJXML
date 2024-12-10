@@ -1,0 +1,124 @@
+// Source code is decompiled from a .class file using FernFlower decompiler.
+package DomQueryG0P9OJ;
+
+import java.io.IOException;
+import java.io.PrintStream;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.xpath.XPath;
+import javax.xml.xpath.XPathConstants;
+import javax.xml.xpath.XPathExpressionException;
+import javax.xml.xpath.XPathFactory;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+import org.xml.sax.SAXException;
+
+public class DomQueryG0P9OJ {
+   public DomQueryG0P9OJ() {
+   }
+
+   public static void main(String[] var0) {
+      try {
+         DocumentBuilderFactory var1 = DocumentBuilderFactory.newInstance();
+         DocumentBuilder var2 = var1.newDocumentBuilder();
+         Document var3 = var2.parse("XMLG0P9OJ.xml");
+         var3.getDocumentElement().normalize();
+         XPath var4 = XPathFactory.newInstance().newXPath();
+         String var5 = "";
+         var5 = "/gepjarmu/birtoklas";
+         NodeList var6 = (NodeList)var4.compile(var5).evaluate(var3, XPathConstants.NODESET);
+
+         for(int var7 = 0; var7 < var6.getLength(); ++var7) {
+            Node var8 = var6.item(var7);
+            System.out.println("\nAktu\u00e1lis elem: " + var8.getNodeName());
+            PrintStream var10000;
+            NodeList var10001;
+            Element var9;
+            if (var8.getNodeType() == 1 && var8.getNodeName().equals("szemelygepjarmu")) {
+               var9 = (Element)var8;
+               System.out.println("Rendszam: " + var9.getAttribute("rendszam"));
+               var10000 = System.out;
+               var10001 = var9.getElementsByTagName("tulaj_jogsi");
+               var10000.println("Tulaj jogsi: " + var10001.item(0).getTextContent());
+               var10000 = System.out;
+               var10001 = var9.getElementsByTagName("alvaz_szama");
+               var10000.println("Alvaz szama: " + var10001.item(0).getTextContent());
+               var10000 = System.out;
+               var10001 = var9.getElementsByTagName("motor_szama");
+               var10000.println("Motor szama: " + var10001.item(0).getTextContent());
+               var10000 = System.out;
+               var10001 = var9.getElementsByTagName("gyartas_sorszam");
+               var10000.println("Gyartasi szam: " + var10001.item(0).getTextContent());
+            }
+
+            if (var8.getNodeType() == 1 && var8.getNodeName().equals("tulajdonos")) {
+               var9 = (Element)var8;
+               System.out.println("Jogositvany szama: " + var9.getAttribute("jogositvany_szama"));
+               var10000 = System.out;
+               var10001 = var9.getElementsByTagName("keresztnev");
+               var10000.println("Keresztnev: " + var10001.item(0).getTextContent());
+               var10000 = System.out;
+               var10001 = var9.getElementsByTagName("vezeteknev");
+               var10000.println("Vezeteknev: " + var10001.item(0).getTextContent());
+            }
+
+            if (var8.getNodeType() == 1 && var8.getNodeName().equals("motor")) {
+               var9 = (Element)var8;
+               System.out.println("Motor szama: " + var9.getAttribute("motorszam"));
+               var10000 = System.out;
+               var10001 = var9.getElementsByTagName("uzemanyag");
+               var10000.println("Uzemanyag: " + var10001.item(0).getTextContent());
+               var10000 = System.out;
+               var10001 = var9.getElementsByTagName("loero");
+               var10000.println("Loero: " + var10001.item(0).getTextContent());
+               var10000 = System.out;
+               var10001 = var9.getElementsByTagName("nyomatek");
+               var10000.println("Nyomatek: " + var10001.item(0).getTextContent());
+            }
+
+            if (var8.getNodeType() == 1 && var8.getNodeName().equals("karosszeria")) {
+               var9 = (Element)var8;
+               System.out.println("Alvazszam: " + var9.getAttribute("alvazszam"));
+               var10000 = System.out;
+               var10001 = var9.getElementsByTagName("felulet");
+               var10000.println("Felulet: " + var10001.item(0).getTextContent());
+               var10000 = System.out;
+               var10001 = var9.getElementsByTagName("matrica");
+               var10000.println("Matrica: " + var10001.item(0).getTextContent());
+               var10000 = System.out;
+               var10001 = var9.getElementsByTagName("szin");
+               var10000.println("Elsodleges szin: " + var10001.item(0).getTextContent());
+            }
+
+            if (var8.getNodeType() == 1 && var8.getNodeName().equals("gyartas")) {
+               var9 = (Element)var8;
+               System.out.println("ID: " + var9.getAttribute("gyartasID"));
+               var10000 = System.out;
+               var10001 = var9.getElementsByTagName("marka");
+               var10000.println("Marka: " + var10001.item(0).getTextContent());
+               var10000 = System.out;
+               var10001 = var9.getElementsByTagName("modell");
+               var10000.println("Modell: " + var10001.item(0).getTextContent());
+               var10000 = System.out;
+               var10001 = var9.getElementsByTagName("gyartasi_ev");
+               var10000.println("Gyartasi ev: " + var10001.item(0).getTextContent());
+            }
+
+            if (var8.getNodeType() == 1 && var8.getNodeName().equals("birtoklas")) {
+               var9 = (Element)var8;
+               System.out.println("Rendszam: " + var9.getAttribute("rendszam"));
+               System.out.println("Jogositvany szama: " + var9.getAttribute("jogositvany_szama"));
+               var10000 = System.out;
+               var10001 = var9.getElementsByTagName("birtoklas_kezdete");
+               var10000.println("Birtoklas kezdete: " + var10001.item(0).getTextContent());
+            }
+         }
+      } catch (SAXException | IOException | XPathExpressionException | ParserConfigurationException var10) {
+         var10.printStackTrace();
+      }
+
+   }
+}
