@@ -1,0 +1,51 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<title>C# programozási nyelv</title>
+</head>
+<body style="background-color: #f1a7fc;">
+<a href="index.html"><img src="img/iit.jpg" alt="me_iit" width="300" height="250"></a><a><img src="img/csharp.png" width="500" height="250" align=right></a>
+<br></br>
+
+
+<a href="csharp.html">
+<h1>C#</h1>
+</a>
+
+<h2>C# programozási nyelv</h2>
+<p>A C# az a programozási nyelv, ami a legközvetlenebb módon tükrözi az alatta működő, minden .NET programot futtató .NET keretrendszert, valamint erősen függ is attól: nincsen nem menedzselt, natív módban futó C# program.</p>
+
+<p>A primitív adattípusai objektumok, a .NET típusok megfelelői.
+
+<p>Szemétgyűjtést használ, valamint az absztrakcióinak többsége (osztályok, interfészek, delegáltak, kivételek…) a .NET futtatórendszert használja közvetlen módon.</p>
+
+<p>A C vagy C++ nyelvhez hasonlítva a C# több korlátozást és továbbfejlesztést is tartalmaz. A lehetőségei közül néhány:</p>
+
+<br></br>
+ <ul>
+     <li>A mutatók és a nem ellenőrzött aritmetika csak egy speciális, nem biztonságos módban (unsafe mode) használható. A legtöbb objektum-hozzáférés csak biztonságos hivatkozásokon keresztül tehető meg, és az aritmetikai műveletek debug módban túlcsordulás szempontjából ellenőrzöttek.</li>
+     <li>Az objektumok nem szabadíthatók fel közvetlen módon, ehelyett a szemétgyűjtő szabadítja fel őket, mikor már nincs rájuk hivatkozás. Ez a módszer kizárja a nem létező objektumokra való hivatkozás lehetőségét.</li>
+     <li>A destruktorok (~) elérhetőek. A megfelelően megírt IDisposable interfész (Disposable programozási minta), aminek a lefutását garantálja using blokk, együtt kikényszerítheti az azonnali felszabadítást az osztályon belüli natív erőforrások esetében. A nem natív erőforrások felszabadítását ebben az esetben is a szemétgyűjtő (Garbage Collector) végzi. A finalizerek szintén rendelkezésre állnak, de nem váltanak ki azonnali felszabadítást. Finalizer a Dispose eljárás javasolt implementációs módozatában nem fut le, mivel az ajánlás szerint a szemétgyűjtőt utasítani kell a finalizer hívás kihagyására.</li>
+     <li>A nyelv csak egyszeres öröklődést támogat, de egy osztály több interfészt is megvalósíthat.</li>
+     <li>A C# sokkal típusbiztosabb, mint a C++. Az egyetlen implicit konverzió a biztonságos konverzió, úgy mint az egészek tágabb intervallumba konvertálása vagy a leszármazott osztályok alaposztályba konvertálása. Nincs implicit konverzió az egészek és a logikai típus (boolean) között, a felsorolás tagok és az egészek között. Nincsenek void mutatók (bár az Object osztályra mutató mutatók hasonlóak), valamint bármely, a felhasználó által definiált implicit konverziót explicit módon meg kell jelölni.</li>
+	 <li>A felsorolás adattagjai a saját névterükben helyezkednek el.</li>
+	 <li>A 2.0-s verziótól felfelé már rendelkezik a generikus programozás néhány eszközével.</li>
+	 <li>Tulajdonságok (Properties) használhatók, amelyek úgy tesznek lehetővé kódfuttatást mezők beállításakor és olvasásakor, hogy közben az adattagok szintaxisát használja.</li>
+</ul> 
+
+<a href="cad.html">
+<h1>CAD</h1>
+</a>
+
+<a href="sap.html">
+<h1>SAP</h1>
+</a>
+
+<a href="orarend.html"><h1>Órarend</h1></a>
+</body>
+
+<footer>
+<br>Jobbágy Dániel, G0P9OJ, 2024</br>
+</footer>
+
+</html>
