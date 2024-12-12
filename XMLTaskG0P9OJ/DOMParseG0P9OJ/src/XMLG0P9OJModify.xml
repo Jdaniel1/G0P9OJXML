@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<gepjarmu xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="XMLSchemaG0P9OJ.xsd">
+
+    <!-- munkagepek -->
+
+    <munkagep rendszam="AB-CD-123">
+        <tulajID>HU345678</tulajID>
+        <motorID>100FDSAF008F1G</motorID>
+        <jarmuID>0FSFDSFFF70000019</jarmuID>
+        <gyartasID>15B</gyartasID>
+        <biztosit>FSDAG34</biztosit>
+    </munkagep>
+
+    <munkagep rendszam="MM-AB-123">
+        <tulajID>HU346544</tulajID>
+        <motorID>100FDFGDS58F1G</motorID>
+        <jarmuID>0FSFDSCCC70000019</jarmuID>
+        <gyartasID>10B</gyartasID>
+        <biztosit>HSDAG34</biztosit>
+    </munkagep>
+
+    <munkagep rendszam="KD-QS-510">
+        <tulajID>RO378544</tulajID>
+        <motorID>540FDFGDS58F1G</motorID>
+        <jarmuID>3HSFDSCCC70000019</jarmuID>
+        <gyartasID>98C</gyartasID>
+    </munkagep>
+
+    <!-- tulajdonosok -->
+
+    <tulajdonos jogositvany_szama="FR346544">
+        <nev>
+            <vnev>Kovacs</vnev>
+            <knev>Arpad</knev>
+        </nev>
+    </tulajdonos>
+
+    <tulajdonos jogositvany_szama="HU346544">
+        <nev>
+            <vnev>Szabo</vnev>
+            <knev>Peter</knev>
+        </nev>
+    </tulajdonos>
+
+    <tulajdonos jogositvany_szama="RO378544">
+        <nev>
+            <vnev>Elekes</vnev>
+            <knev>Tibor</knev>
+        </nev>
+    </tulajdonos>
+
+    <!-- motorok -->
+
+    <motor motorszam="100FDSAF008F1G">
+        <meghajtas>dizel</meghajtas>
+        <loero>68</loero>
+        <nyomatek>160 Nm</nyomatek>
+    </motor>
+
+    <motor motorszam="100FDFGDS58F1G">
+        <meghajtas>hibrid</meghajtas>
+        <loero>75</loero>
+        <nyomatek>107 Nm</nyomatek>
+    </motor>
+
+    <motor motorszam="540FDFGDS58F1G">
+        <meghajtas>elektromos</meghajtas>
+        <loero>150</loero>
+        <nyomatek>310 Nm</nyomatek>
+    </motor>
+
+    <!-- karosszériák -->
+
+    <karosszeria alvazszam="0FSFDSFFF70000019">
+        <felulet>matt</felulet>
+        <engedely>van</engedely>
+        <szin>feher</szin>
+        <szin>szürke</szin>
+    </karosszeria>
+
+    <karosszeria alvazszam="0FSFDSCCC70000019">
+        <felulet>teljes</felulet>
+        <engedely>van</engedely>
+        <szin>feher</szin>
+    </karosszeria>
+
+    <karosszeria alvazszam="3HSFDSCCC70000019">
+        <felulet>reszleges</felulet>
+        <engedely>van</engedely>
+        <szin>zöld</szin>
+        <szin>fekete</szin>
+        <szin>szürke</szin>
+    </karosszeria>
+
+    <!-- informaciok -->
+
+    <gyartas gyartasID="15B">
+        <marka>Hyundai</marka>
+        <modell>R25Z-9AK</modell>
+        <evjarat>2020</evjarat>
+    </gyartas>
+
+    <gyartas gyartasID="10B">
+        <marka>JCB</marka>
+        <modell>1CX</modell>
+        <evjarat>2008</evjarat>
+    </gyartas>
+
+    <gyartas gyartasID="98C">
+        <marka>JCB</marka>
+        <modell>4CX</modell>
+        <evjarat>2019</evjarat>
+    </gyartas>
+
+    <!-- birtoklas kapcsolatok -->
+
+    <birtoklas jogositvany_szama="HU345678" rendszam="AB-CD-123">
+        <birtoklas_kezdete>2022-01-01</birtoklas_kezdete>
+    </birtoklas>
+
+    <birtoklas jogositvany_szama="HU346544" rendszam="AA-BB-720">
+        <birtoklas_kezdete>2021-11-04</birtoklas_kezdete>
+    </birtoklas>
+
+    <birtoklas jogositvany_szama="RO378544" rendszam="KD-QS-510">
+        <birtoklas_kezdete>2020-05-18</birtoklas_kezdete>
+    </birtoklas>
+
+</gepjarmu>
